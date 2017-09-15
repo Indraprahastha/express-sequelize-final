@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     ItemId: DataTypes.INTEGER,
     price: DataTypes.INTEGER
   })
-  Diagnosa.associate = (models) => {
+  Supplieritem.associate = (models) => {
     Supplieritem.belongsTo(models.Supplier,{foreignKey: 'SupplierId'})
     Supplieritem.belongsTo(models.Item,{foreignKey: 'ItemId'})
   }

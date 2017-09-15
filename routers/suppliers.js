@@ -57,5 +57,26 @@ router.get('/delete/:id', (req, res) => {
     res.redirect('/suppliers')
   })
 })
+//========================================================== add item
+router.get('/additem/:id', (req, res)=>{
+  models.Supplier.findById(req.params.id)
+  .then((dataSupplier) => {
+    models.Item.findAll()
+    .then((dataItem) => {
+      res.render('suppliers-addItems', {dataSupplier:dataSupplier, dataItem:dataItem})
+    })
+  })
+})
+
+router.post('/additem/:id', (req, res)=>{
+  models.Supplieritem.create({
+    SupplierId: `${req.params.id}`,
+    ItemId: `${req.body.ItemId}`,
+    price: `${req.body.price}`
+  })
+  .then(() => {
+    res.redirect('/suppliers-addItems')
+  })
+})
 
 module.exports = router
