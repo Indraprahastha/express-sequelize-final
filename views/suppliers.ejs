@@ -10,6 +10,7 @@
         <th style="text-align:center">ID</th>
         <th style="text-align:center">Nama</th>
         <th style="text-align:center">Kota</th>
+        <th style="text-align:center">List Item</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,10 @@
           <td><%=dataSupplier.id%></td>
           <td><%=dataSupplier.name%></td>
           <td><%=dataSupplier.kota%></td>
+          <td><%=dataSupplier.kota%></td>
+          <td><a href="/suppliers/additem/<%= dataSupplier.id %>">Add Item</a></td>
+          <td><a href="/suppliers/edit/<%= dataSupplier.id %>">Edit</a></td>
+          <td><a href="/suppliers/delete/<%= dataSupplier.id %>">Delete</a></td>
 
           </tr>
         <%})%>

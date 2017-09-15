@@ -1,0 +1,19 @@
+<html>
+  <%- include partial/head %>
+  <body>
+    <%- include partial/menu %>
+<!--Menu ======================================================================== Diatas-->
+
+<div style="text-align:center;margin-top:100px"class="container">
+
+  <form class="form-horizontal" action="/items/edit/<%= dataItem[0].id %>" method="post">
+
+    <input type="text" name="name" class="form-control" value="<%= dataItem[0].name %>"><br>
+    <input type="text" name="brand" class="form-control" value="<%= dataItem[0].brand %>"><br>
+    <input type="text" name="codeitem" class="form-control" value="<%= dataItem[0].codeitem %>"><br>
+
+    <br><button type="submit" name="submit">SIMPAN</button>
+  </form>
+</div>
+</body>
+</html>

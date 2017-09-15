@@ -1,0 +1,35 @@
+<html>
+  <%- include partial/head %>
+  <body>
+    <%- include partial/menu %>
+<!--Menu ======================================================================== Diatas-->
+<div style="text-align:center;margin-top:50px"class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="text-align:center">ID</th>
+        <th style="text-align:center">Nama</th>
+        <th style="text-align:center">Brand</th>
+        <th style="text-align:center">Kode Item</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <%dataItem.forEach((dataItem)=>{%>
+          <tr>
+          <td><%=dataItem.id%></td>
+          <td><%=dataItem.name%></td>
+          <td><%=dataItem.brand%></td>
+          <td><%=dataItem.codeitem%></td>
+          <td><a href="/items/edit/<%= dataItem.id %>">Edit</a></td>
+          <td><a href="/items/delete/<%= dataItem.id %>">Delete</a></td>
+
+          </tr>
+        <%})%>
+
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

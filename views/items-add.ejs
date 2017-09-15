@@ -1,0 +1,18 @@
+<html>
+  <%- include partial/head %>
+  <body>
+    <%- include partial/menu %>
+<!--Menu ======================================================================== Diatas-->
+
+<div style="text-align:center;margin-top:100px"class="container">
+
+  <form class="form-horizontal" action="/items/add" method="post">
+    <input type="text" name="name" class="form-control" placeholder="Name"><br>
+    <input type="text" name="brand" class="form-control" placeholder="Brand"><br>
+    <input type="text" name="codeitem" class="form-control" placeholder="Kode Item"><br>
+
+    <br><button type="submit" name="submit">SIMPAN</button>
+  </form>
+</div>
+</body>
+</html>
