@@ -1,0 +1,31 @@
+<html>
+  <%- include partial/head %>
+  <body>
+    <%- include partial/menu %>
+<!--Menu ======================================================================== Diatas-->
+<div style="text-align:center;margin-top:50px"class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th style="text-align:center">ID</th>
+        <th style="text-align:center">Nama</th>
+        <th style="text-align:center">Kota</th>
+      </tr>
+    </thead>
+    <tbody>
+
+        <%dataSupplier.forEach((dataSupplier)=>{%>
+          <tr>
+          <td><%=dataSupplier.id%></td>
+          <td><%=dataSupplier.name%></td>
+          <td><%=dataSupplier.kota%></td>
+
+          </tr>
+        <%})%>
+
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
